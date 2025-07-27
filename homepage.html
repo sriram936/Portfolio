@@ -16,6 +16,35 @@
         #myDescription {
             text-align: center;
         }
+        #nav {
+            text-align: center;
+        }
+        #navbar {
+            list-style-type:none;
+            background-color: white;
+            margin: 0px;
+            padding: 0px;
+            border-radius: 5px;
+        }
+        #navbar li{
+            display: inline-block;
+            padding: 1vh 1% 1vh 1%;
+            margin: 0.4vh 0.1%;
+            /* background-color: grey; */
+            border-radius: 4%;
+        }
+        #navbar li a{
+            color:black;
+            text-decoration: none;
+            font-size:18px;
+        }
+        #navbar li:hover{
+            display: inline-block;
+            padding: 1vh 1% 1vh 1%;
+            margin: 0.4vh 0.1%;
+            background-color: grey;
+            border-radius: 4%;
+        }
     </style>
 </head>
 <body>
@@ -25,13 +54,24 @@
         </div>
         <div id="myDescription">
             <h1>SRIRAM MUPPURU</h1>
-            <h2>I am the monk in the voyage to<br>
-                Prove god through physics<br>
-                Help world through ML<br>
-                Earn money through physics </h2>
+            <h2>I am the monk on a sacred quest-<br>
+                To unveil God through physics,<br>
+                To serve the world through ML,<br>
+                To prosper through the beauty of Mathematics</h2>
         </div>
         <hr>
-        <div id="nav"></div>
+        <div id="nav">
+            <ul id="navbar">
+                <li><a href="">About</a></li>
+                <li><a href="">Teaching</a></li>
+                <li><a href="">Featured Writing</a></li>
+                <li><a href="">Publications</a></li>
+                <li><a href="">Pet Projects</a></li>
+                <li><a href="">Blogs</a></li>
+                <li><a href="">Progress-Reports</a></li>
+                <li id="toggleBtn">🌓</li>
+            </ul>
+        </div>
         <hr>
         <div id="about"></div>
         <div id="projects"></div>
@@ -41,5 +81,19 @@
         <div id="footer"></div>
 
     </div>
+    <script>
+        const toggle = document.getElementById("toggleBtn");
+        const body = document.body;  // Correct way to get the body element
+        
+        toggle.addEventListener('click', function() {  // Added parentheses and fixed syntax
+            if (body.style.backgroundColor === "white") {
+                body.style.backgroundColor = "black";
+                body.style.color = "white";  // Change text color for better visibility
+            } else {
+                body.style.backgroundColor = "white";
+                body.style.color = "black";  // Revert text color
+            }
+        });
+    </script>
 </body>
 </html>
