@@ -45,6 +45,28 @@
             background-color: grey;
             border-radius: 4%;
         }
+
+        /* Dark mode styles */
+        .darkmode {
+            background-color: #181818;
+            color: #f1f1f1;
+        }
+        .darkmode #navbar {
+            background-color: #232323;
+        }
+        .darkmode #navbar li a {
+            color: #f1f1f1;
+        }
+        .darkmode #navbar li:hover {
+            background-color: #444;
+        }
+        .darkmode hr {
+            border-color: #444;
+        }
+        .darkmode #myDescription h1,
+        .darkmode #myDescription h2 {
+            color: #f1f1f1;
+        }
     </style>
 </head>
 <body>
@@ -82,18 +104,9 @@
 
     </div>
     <script>
-        const toggle = document.getElementById("toggleBtn");
-        const body = document.body;  // Correct way to get the body element
-        
-        toggle.addEventListener('click', function() {  // Added parentheses and fixed syntax
-            if (body.style.backgroundColor === "white") {
-                body.style.backgroundColor = "black";
-                body.style.color = "white";  // Change text color for better visibility
-            } else {
-                body.style.backgroundColor = "white";
-                body.style.color = "black";  // Revert text color
-            }
-        });
+        document.getElementById('toggleBtn').onclick = function() {
+            document.body.classList.toggle('darkmode');
+        }
     </script>
 </body>
 </html>
